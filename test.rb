@@ -18,5 +18,5 @@ result = Evidence.where("LOWER(content) LIKE LOWER(:q)", q: "%#{query}%")
 
 # debugger
 
-p result
-p result.limit(25).offset(0)
+puts result.to_sql
+puts result.limit(25).offset(0).to_sql
